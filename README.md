@@ -1,4 +1,7 @@
 ## readpassword
+[![readpassword Scala version support](https://index.scala-lang.org/hnaderi/scala-readpass/readpassword/latest.svg)](https://index.scala-lang.org/hnaderi/scala-readpass/readpassword)
+![Build](https://github.com/hnaderi/scala-readpass/workflows/Continuous%20Integration/badge.svg)
+![GitHub](https://img.shields.io/github/license/hnaderi/scala-readpass)
 
 This is a cross platform `readpassword` utility useful for CLIs that require reading password from stdin.
 It acts like standard unix style of password input, like in `sudo` where password is hidden on input.

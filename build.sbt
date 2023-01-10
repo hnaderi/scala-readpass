@@ -8,7 +8,6 @@ ThisBuild / developers := List(
   tlGitHubDev("hnaderi", "Hossein Naderi")
 )
 ThisBuild / tlSonatypeUseLegacyHost := false
-ThisBuild / tlSitePublishBranch := None
 
 val Scala213 = "2.13.10"
 ThisBuild / crossScalaVersions := Seq(Scala213, "3.2.1")

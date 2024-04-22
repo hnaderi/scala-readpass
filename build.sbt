@@ -13,7 +13,20 @@ val Scala213 = "2.13.12"
 ThisBuild / crossScalaVersions := Seq(Scala213, "3.3.3")
 ThisBuild / scalaVersion := Scala213
 ThisBuild / githubWorkflowOSes :=
-  Seq("ubuntu-20.04", "ubuntu-22.04", "macos-11", "macos-12", "windows-2022")
+  Seq("ubuntu-20.04", "ubuntu-latest", "macos-11", "macos-12", "windows-2022")
+ThisBuild / githubWorkflowAddedJobs += WorkflowJob(
+  id = "post-build",
+  name = "post build",
+  needs = List("build"),
+  steps = List(
+    WorkflowStep.Run(
+      commands = List("echo success!"),
+      name = Some("post build")
+    )
+  ),
+  scalas = Nil,
+  javas = Nil
+)
 
 lazy val root = tlCrossRootProject.aggregate(lib, example)
 

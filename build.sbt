@@ -10,7 +10,7 @@ ThisBuild / developers := List(
 ThisBuild / tlSonatypeUseLegacyHost := false
 
 val Scala213 = "2.13.14"
-ThisBuild / crossScalaVersions := Seq(Scala213, "3.3.3")
+ThisBuild / crossScalaVersions := Seq(Scala213, "3.4.1")
 ThisBuild / scalaVersion := Scala213
 ThisBuild / githubWorkflowOSes :=
   Seq("ubuntu-20.04", "ubuntu-latest", "macos-11", "macos-12", "windows-2022")

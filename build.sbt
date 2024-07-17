@@ -9,9 +9,13 @@ ThisBuild / developers := List(
 )
 ThisBuild / tlSonatypeUseLegacyHost := false
 
+val LTSJava = JavaSpec.temurin("17")
 val Scala213 = "2.13.14"
 ThisBuild / crossScalaVersions := Seq(Scala213, "3.4.2")
 ThisBuild / scalaVersion := Scala213
+
+ThisBuild / tlJdkRelease := Some(17)
+ThisBuild / githubWorkflowJavaVersions := Seq(LTSJava)
 ThisBuild / githubWorkflowOSes :=
   Seq(
     "ubuntu-20.04",

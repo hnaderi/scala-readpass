@@ -10,19 +10,17 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ typelevel-nix.overlay ];
+          overlays = [ typelevel-nix.overlays.default ];
         };
-      in
-      {
+      in {
         devShell = pkgs.devshell.mkShell {
           imports = [ typelevel-nix.typelevelShell ];
           name = "readpassword-shell";
           typelevelShell = {
-            jdk.package = pkgs.jdk8;
+            jdk.package = pkgs.jdk17;
             nodejs.enable = true;
-	    native.enable = true;
+            native.enable = true;
           };
         };
-      }
-    );
+      });
 }

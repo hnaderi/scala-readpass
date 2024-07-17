@@ -13,7 +13,13 @@ val Scala213 = "2.13.14"
 ThisBuild / crossScalaVersions := Seq(Scala213, "3.4.2")
 ThisBuild / scalaVersion := Scala213
 ThisBuild / githubWorkflowOSes :=
-  Seq("ubuntu-20.04", "ubuntu-latest", "macos-11", "macos-12", "windows-2022")
+  Seq(
+    "ubuntu-20.04",
+    "ubuntu-latest",
+    "macos-13",
+    "macos-latest",
+    "windows-2022"
+  )
 ThisBuild / githubWorkflowAddedJobs += WorkflowJob(
   id = "post-build",
   name = "post build",

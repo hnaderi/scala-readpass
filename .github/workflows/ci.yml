@@ -30,8 +30,8 @@ jobs:
         os:
           - ubuntu-20.04
           - ubuntu-latest
-          - macos-11
-          - macos-12
+          - macos-13
+          - macos-latest
           - windows-2022
         scala: [2.13, 3]
         java: [temurin@8]

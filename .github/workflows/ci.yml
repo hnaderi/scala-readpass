@@ -40,9 +40,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: Install sbt
-        if: contains(runner.os, 'macos')
-        shell: bash
-        run: brew install sbt
+        uses: sbt/setup-sbt@v1
 
       - name: Ignore line ending differences in git
         if: contains(runner.os, 'windows')
@@ -124,8 +122,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install sbt
-        if: contains(runner.os, 'macos')
-        run: brew install sbt
+        uses: sbt/setup-sbt@v1
 
       - name: Ignore line ending differences in git
         if: contains(runner.os, 'windows')
@@ -223,8 +220,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install sbt
-        if: contains(runner.os, 'macos')
-        run: brew install sbt
+        uses: sbt/setup-sbt@v1
 
       - name: Ignore line ending differences in git
         if: contains(runner.os, 'windows')

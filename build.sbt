@@ -7,7 +7,6 @@ ThisBuild / licenses := Seq(License.Apache2)
 ThisBuild / developers := List(
   tlGitHubDev("hnaderi", "Hossein Naderi")
 )
-ThisBuild / tlSonatypeUseLegacyHost := false
 
 val LTSJava = JavaSpec.temurin("17")
 val Scala213 = "2.13.15"

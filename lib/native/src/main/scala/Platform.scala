@@ -18,18 +18,20 @@ package dev.hnaderi
 
 private object Platform {
   import platform_terminal.setStdinEcho
-  def readPassword: String = {
+  def readPassword(): String = {
     try {
       setStdinEcho(0)
-      Console.in.readLine()
+      val out = Console.in.readLine()
+      println()
+      out
     } finally {
       setStdinEcho(1)
     }
   }
 
   def readPassword(prompt: String): String = {
-    println(prompt)
-    readPassword
+    print(prompt)
+    readPassword()
   }
 }
 

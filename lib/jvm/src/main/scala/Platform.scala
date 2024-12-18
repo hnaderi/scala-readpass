@@ -17,7 +17,7 @@
 package dev.hnaderi
 
 private object Platform {
-  def readPassword: String = new String(System.console().readPassword())
+  def readPassword(): String = new String(System.console().readPassword())
   def readPassword(prompt: String): String =
     new String(System.console().readPassword(prompt))
 }

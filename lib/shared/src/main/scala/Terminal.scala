@@ -17,6 +17,6 @@
 package dev.hnaderi
 
 package object readpassword {
-  def read: String = Platform.readPassword
+  def read(): String = Platform.readPassword()
   def read(prompt: String): String = Platform.readPassword(prompt)
 }

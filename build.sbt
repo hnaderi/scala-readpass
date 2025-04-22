@@ -17,7 +17,6 @@ ThisBuild / tlJdkRelease := Some(17)
 ThisBuild / githubWorkflowJavaVersions := Seq(LTSJava)
 ThisBuild / githubWorkflowOSes :=
   Seq(
-    "ubuntu-20.04",
     "ubuntu-latest",
     "macos-13",
     "macos-latest",

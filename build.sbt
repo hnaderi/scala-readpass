@@ -18,9 +18,8 @@ ThisBuild / githubWorkflowJavaVersions := Seq(LTSJava)
 ThisBuild / githubWorkflowOSes :=
   Seq(
     "ubuntu-latest",
-    "macos-13",
     "macos-latest",
-    "windows-2022"
+    "windows-latest"
   )
 ThisBuild / githubWorkflowAddedJobs += WorkflowJob(
   id = "post-build",

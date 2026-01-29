@@ -9,7 +9,7 @@ ThisBuild / developers := List(
 )
 
 val LTSJava = JavaSpec.temurin("17")
-val Scala213 = "2.13.18"
+val Scala213 = "3.8.1"
 ThisBuild / crossScalaVersions := Seq(Scala213, "3.7.4")
 ThisBuild / scalaVersion := Scala213
 
